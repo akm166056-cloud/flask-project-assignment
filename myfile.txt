@@ -1,0 +1,2 @@
+Hello, this is my first file in Python!
+I am learning how to use file functions.
