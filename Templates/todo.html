@@ -19,18 +19,19 @@
   <h1>Create To-Do</h1>
   <p class="tip">This form posts to <code>/submittodoitem</code>.</p>
 
-  <form method="POST" action="/submittodoitem">
-    <div>
-      <label for="itemName">Item Name</label>
-      <input id="itemName" name="itemName" type="text" required />
-    </div>
+	  <form method="POST" action="/submittodoitem">
+	  <label for="itemName">Item Name:</label>
+	  <input type="text" id="itemName" name="itemName" required><br><br>
 
-    <div>
-      <label for="itemDescription">Item Description</label>
-      <textarea id="itemDescription" name="itemDescription" rows="4" placeholder="Optional details"></textarea>
-    </div>
+	  <label for="itemDescription">Item Description:</label>
+	  <input type="text" id="itemDescription" name="itemDescription"><br><br>
 
-    <button class="primary" type="submit">Submit</button>
-  </form>
+	  <!-- New Field: Item ID -->
+	  <label for="itemId">Item ID:</label>
+	  <input type="text" id="itemId" name="itemId"><br><br>
+
+	  <button type="submit">Submit</button>
+	</form>
+
 </body>
 </html>
