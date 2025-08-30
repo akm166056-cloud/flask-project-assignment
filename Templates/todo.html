@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>To-Do</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; }
+    h1 { margin-bottom: 0.5rem; }
+    form { display: grid; gap: 12px; margin-top: 12px; }
+    label { font-weight: 600; }
+    input[type="text"], textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; }
+    button { padding: 10px 16px; border: 0; border-radius: 10px; cursor: pointer; }
+    .primary { background: #2563eb; color: white; }
+    .tip { color: #666; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>Create To-Do</h1>
+  <p class="tip">This form posts to <code>/submittodoitem</code>.</p>
+
+  <form method="POST" action="/submittodoitem">
+    <div>
+      <label for="itemName">Item Name</label>
+      <input id="itemName" name="itemName" type="text" required />
+    </div>
+
+    <div>
+      <label for="itemDescription">Item Description</label>
+      <textarea id="itemDescription" name="itemDescription" rows="4" placeholder="Optional details"></textarea>
+    </div>
+
+    <button class="primary" type="submit">Submit</button>
+  </form>
+</body>
+</html>
